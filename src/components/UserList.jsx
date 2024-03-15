@@ -1,11 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FixedSizeList } from 'react-window'
 
-const Row = ({ index, style }) => <div style={style}>Row {index}</div>
+import UserCard from './UserCard'
+import UserProfile from './UserProfile'
+import '../styles/UserListStyle.css'
 
-const Example = () => (
-	<FixedSizeList height={150} itemCount={1000} itemSize={35} width={300}>
-		{Row}
-	</FixedSizeList>
-)
-export default Example
+const UserList = () => {
+	const [selectedUser, setSelectedUser] = useState(null)
+
+	const handleUserClick = (user) => {
+		setSelectedUser(user)
+	}
+
+	const renderUserCard = ({ index, style }) => (
+		<div
+			style={style}
+			className='ListItem'
+			onClick={() => handleUserClick({ id: index + 1 })}
+		>
+			<UserCard index={index + 1} />
+		</div>
+	)
+
+	return (
+		<div className='UserList-wrapper'>
+			<div className='UserList'>
+				<FixedSizeList
+					className='List'
+					height={400}
+					itemCount={1000000}
+					itemSize={25}
+					width={300}
+				>
+					{renderUserCard}
+				</FixedSizeList>
+			</div>
+			{selectedUser && <UserProfile user={selectedUser} />}
+		</div>
+	)
+}
+export default UserList

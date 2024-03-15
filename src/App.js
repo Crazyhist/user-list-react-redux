@@ -1,12 +1,16 @@
 import React from 'react'
 
-import Row from './components/UserList.jsx'
+import './styles/main.css'
+
+import UserProfile from './components/UserProfile.jsx'
+import UserList from './components/UserList.jsx'
 import { Store } from './store/store'
 
 function App() {
 	return (
 		<div className='App'>
-			<Row />
+			<UserList />
+			<UserProfile />
 		</div>
 	)
 }

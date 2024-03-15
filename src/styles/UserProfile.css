@@ -1,0 +1,28 @@
+.UserProfile-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+h2 {
+	border: solid 1px #0d56f3;
+}
+
+.UserProfile-infoWrapper {
+	display: flex;
+	gap: 50px;
+}
+
+.UserProfile-img {
+	width: 60px;
+}
+
+.UserProfile-info {
+	display: flex;
+	flex-direction: column;
+}
+
+button {
+	padding: 10px;
+	width: 100%;
+}
