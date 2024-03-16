@@ -5,7 +5,7 @@ import UserCard from './UserCard'
 import UserProfile from './UserProfile'
 import '../styles/UserListStyle.css'
 
-const UserList = () => {
+const UserList = ({ users }) => {
 	const [selectedUser, setSelectedUser] = useState(null)
 
 	const handleUserClick = (user) => {

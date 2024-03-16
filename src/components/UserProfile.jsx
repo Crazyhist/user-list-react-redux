@@ -16,11 +16,15 @@ const UserProfile = ({ user }) => {
 				<div className='UserProfile-infoWrapper'>
 					<img src={userSvg} alt='qweqe' className='UserProfile-img' />
 					<div className='UserProfile-info'>
-						<span>Должность</span>
-						<span>Отдел</span>
-						<span>Компания</span>
+						<span>ID</span>
+						<span>Имя</span>
+						<span>Фамилия</span>
+						<span>Возраст</span>
+						<span>Почта</span>
 					</div>
 					<div className='UserProfile-info'>
+						<input type='text' />
+						<input type='text' />
 						<input type='text' />
 						<input type='text' />
 						<input type='text' />
