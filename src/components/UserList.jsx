@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { FixedSizeList } from 'react-window'
 
+import { useSelector, useDispatch } from 'react-redux'
+import { selectUser } from '../redux/slices/usersSlice'
+
 import UserCard from './UserCard'
 import UserProfile from './UserProfile'
 import '../styles/UserListStyle.css'
